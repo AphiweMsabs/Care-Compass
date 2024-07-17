@@ -46,23 +46,32 @@ def signUp():
     return render_template("signUp.html")
 
 
-@loginUser.route('/login',methods=['GET', 'POST'])
+@registerUser.route('/login',methods=['GET', 'POST'])
 
 def login():
+      
+      data=request.form
+      print(data)
       if request.method == "POST":
 
         name = request.form.get("firstName")
+        print(name)
         email=request.form.get("email")
-        surname=request.form.get("lastName")
+        print(email)
         password=request.form.get("password")
-        password2=request.form.get("password2")
 
         try:
             user=auth.sign_in_with_email_and_password(email,password)
+            print(user)
             session['user']
         except:
                 return 'Failed to login'
         
         
 
-        return render_template("login.html")
+      return render_template("login.html")
+      
+
+def lougout():
+    session.pop()
+    return render_template("home.html")
