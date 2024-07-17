@@ -63,7 +63,8 @@ def login():
         try:
             user=auth.sign_in_with_email_and_password(email,password)
             print(user)
-            session['user']
+            session['user']=email
+            flash("Well Done", category='success')
         except:
                 return 'Failed to login'
         
@@ -75,3 +76,5 @@ def login():
 def lougout():
     session.pop()
     return render_template("home.html")
+
+
