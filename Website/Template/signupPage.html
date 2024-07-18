@@ -5,28 +5,22 @@
 {% endblock %}
 
 
-
 {% block body %}
     <h1 style="text-align:center;">Create an account</h1>
     <form action="/sign-up" method="post" style="margin: 0 auto;min-width: 100px;max-width: 200px;">
-        <!-- FirstName Field -->
+
         <label for="firstName">Name:</label><br>
         <input type="text" id="firstName" name="firstName" required><br><br>
 
-        <!-- LastName Field -->
         <label for="lastName">Surname:</label><br>
         <input type="text" id="lastName" name="lastName" required><br><br>
 
-        
-        <!-- Email Field -->
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <!-- Password Field -->
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="*********" required><br><br>
 
-        <!-- Confirm Password Field -->
         <label for="password2">Confirm Password:</label>
         <input type="password" id="password2" name="password2" placeholder="*********" required><br><br>
 
@@ -37,7 +31,6 @@
             <option value="Both">Both</option>
         </select><br><br>
 
-        <!-- Submit Button -->
         <input type="submit" value="Sign Up"><br><br>
 
         <p>Already have an account? <a href = "login">Login</a></p>
