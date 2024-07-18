@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, jsonify, request,flash,session
-
+from flask import Blueprint, redirect, render_template, jsonify, request,flash,session, url_for
+from functools import wraps
 import pyrebase
 
 
@@ -71,7 +71,17 @@ def login():
         
 
       return render_template("login.html")
-      
+
+def is_logged_in(f):
+   @wraps(f)
+   def wrap(*args, **kwargs):
+         if 'logged_in' in session:
+            return f(*args, **kwargs)
+         else:
+            flash('Unauthorized Access, Please login', category='error')
+            return redirect(url_for('pages.login'))
+
+   return wrap     
 
 def lougout():
     session.pop()
