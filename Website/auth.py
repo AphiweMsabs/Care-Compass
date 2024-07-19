@@ -1,6 +1,9 @@
 from flask import Blueprint, redirect, render_template, jsonify, request,flash,session, url_for
+from flask_mail import Mail, Message
+# from email_validator import validate_email, EmailNotValidError
 from functools import wraps
 import pyrebase
+
 
 
 config={
@@ -50,14 +53,11 @@ def signUp():
 
 def login():
       
-      data=request.form
-      print(data)
+     
       if request.method == "POST":
 
         name = request.form.get("firstName")
-        print(name)
         email=request.form.get("email")
-        print(email)
         password=request.form.get("password")
 
         try:
@@ -68,8 +68,6 @@ def login():
         except:
                 return 'Failed to login'
         
-        
-
       return render_template("login.html")
 
 def is_logged_in(f):
@@ -83,7 +81,11 @@ def is_logged_in(f):
 
    return wrap     
 
-def lougout():
+
+   
+
+
+def logout():
     session.pop()
     return render_template("home.html")
 
