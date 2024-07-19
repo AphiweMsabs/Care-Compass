@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        
+        <!--FIX CONTAINER-->
+        
+        <div class="col-lg-4 bg-dark form-container d-flex  align-items-center justify-content-center position-relative">
+            <div class="form-wrapper p-4 rounded bg-dark text-white position-relative">
+                <h2 class="text-center mb-4">Support a Cause</h2>
+                
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input type="text" class="form-control" id="surname" name="surname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Donation Frequency</label>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="frequency" id="giveOnce" value="give_once" checked>
+                                <label class="form-check-label" for="giveOnce">
+                                    Give Once
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="frequency" id="giveMonthly" value="give_monthly">
+                                <label class="form-check-label" for="giveMonthly">
+                                    Give Monthly
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="amount">Select Amount</label>
+                        <select class="form-control" id="amount" name="amount">
+                            <option value="20">R20</option>
+                            <option value="50">R50</option>
+                            <option value="100">R100</option>
+                            <option value="500">R500</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customAmount">Or Enter Custom Amount</label>
+                        <input type="number" class="form-control" id="customAmount" name="custom_amount" placeholder="Enter amount">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block mt-4">Donate Now</button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="col-lg-8 bg-image position-relative">
+            <div class="image-text-container d-flex flex-column align-items-center justify-content-center text-white">
+                <h2 class="lato-regular">Make an impact</h2><br>
+                <h1 class="lato-bold">Your support</h1><br>
+                <h1 class="lato-bold">is powerful.</h1><br>
+                <p class="lato-regular">Give a helping hand to those who need it</p>
+              </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+<style>
+    .bg-image {
+        background-image: url('static/img/sponsor.jpg');
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: 1300px 1000px;
+    }
+    
+    .form-container {
+        min-height: 80vh;
+        padding: 0;
+    }
+    
+    .form-wrapper {
+        border-radius: 20px;
+        max-width: 400px;
+        width: 100%;
+    }
+    .image-text-container {
+        position: absolute;  
+       
+        left: 200px !important;
+        text-align: right !important;
+        top: 50%; 
+    }
+  
+    .image-text-container h2 {
+        font-size: 1.5rem;  
+        margin-bottom: 1rem;  
+    }
+
+    .image-text-container h1 {
+        font-size: 2.5rem;  
+        margin-bottom: 0.5rem;  
+    }
+
+    .image-text-container p {
+        font-size: 1rem;  
+        margin-top: 1rem;  
+    }
+    
+    .lato-bold {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+
+        font-size: 100px !important; 
+    }
+    
+    .lato-regular {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 20px !important; 
+
+    }
+
+
+
+
+</style>
+
+
+{% endblock %}
