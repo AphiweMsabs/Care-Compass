@@ -29,7 +29,9 @@
     color: #000 !important; 
 }
 
+
 .navbar-brand {
+    margin-left: 110px;
     margin-right: 60px !important;
     font-size: 30px;
 }
@@ -47,16 +49,93 @@
     margin: auto;
     padding: 0;
   }
-  .carousel-item {
+.carousel-item {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .carousel-item img {
+.carousel-item img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
   }
 
+/* Caption */
+.carousel-caption {
+    left: 100px !important;
+    text-align: left !important;
+    top: 20%; 
+}
 
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 90px !important; 
+  }
+
+
+/* About Us */
+.about-section {
+    /* padding:  90px; */
+    background-color: #2866C0;
+}
+
+.first-half {
+    background-color: #ffffff; 
+    color: #000000;
+    text-align: center;
+    padding: 80px;
+    border-bottom: 1px solid #cccccc; 
+}
+
+.second-half {
+    background-color: #2866C0; 
+    color: #fff;
+    display: flex;
+    text-align: center;
+    padding: 80px;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.goal-box {
+    background-color: #2866C0; 
+    color: #ffffff; 
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    flex: 1;
+    margin: 0 60px;
+    padding: 30px 20px;
+}
+
+.goals-heading {
+    background-color: #2866C0; 
+    color: #ffffff; 
+    padding-top: 50px;
+    text-align: center;
+}
+
+.poppins-regula {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px !important; 
+}
+
+.poppins{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 20px !important;  */
+
+}
+  
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px !important; 
+}
