@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Events Page</title>
+{% endblock %}
+
+{% block body %}
+<form action="/create-events" method="post" style="margin: 0 auto;min-width: 100px;max-width: 200px;">
+    <label for="eventType">Event Type:</label><br>
+    <input type="text" id="eventType" name="eventType" placeholder="e.g Clothing drive" required><br><br>
+
+    <label for="location">Event Location:</label><br>
+    <input type="text" id="location" name="location" required><br><br>
+
+    <label for="eventDate">Event Date:</label><br>
+    <input type="date" id="eventDate" name="location" required><br><br>
+
+    <label for="userType">Province:</label>
+    <select name="province" id="province">
+        <option value="">Choose province</option>
+        <option value="KwaZulu Natal">KwaZulu Natal</option>
+        <option value="Eastern Cape">Eastern Cape</option>
+        <option value="Free State">Free State</option>
+        <option value="Gauteng">Gauteng</option>
+        <option value="Limpopo">Limpopo</option>
+        <option value="Mpumalanga">Mpumalanga</option>
+        <option value="Northern Cape">Northern Cape</option>
+        <option value="North West">North West</option>
+        <option value="Western Cape">Western Cape</option>
+    </select><br><br>
+
+    <label for="host">Host:</label><br>
+    <input type="text" id="host" name="host" required><br><br>
+
+    <textarea id="message" name="message" placeholder="Description"></textarea><br><br><br>
+
+    <input type="submit" value="ADD EVENT">
+</form>
+{% endblock %}
