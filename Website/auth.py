@@ -44,7 +44,7 @@ def signUp():
                 return 'Failed to sign up'
         
 
-    return render_template("signUp.html")
+    return render_template("signupPage.html")
 
 
 @registerUser.route('/login',methods=['GET', 'POST'])
@@ -66,7 +66,7 @@ def login():
         except:
                 return 'Failed to login'
         
-      return render_template("login.html")
+      return render_template("loginPage.html")
 
 def is_logged_in(f):
    @wraps(f)

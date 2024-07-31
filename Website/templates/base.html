@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('home.homePage') }}">
                         <i class="fas fa-home d-block d-lg-none"></i>
                         <i class="fas fa-home d-none d-lg-block"></i>
                         Home
@@ -45,28 +45,28 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('locationPoints.map_page') }}">
+                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('map.map_page') }}">
                         <i class="fas fa-map-marker-alt d-block d-lg-none"></i>
                         <i class="fas fa-map-marker-alt d-none d-lg-block"></i>
                         Location
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('event.showcase_events') }}">
                         <i class="fas fa-calendar-alt d-block d-lg-none"></i>
                         <i class="fas fa-calendar-alt d-none d-lg-block"></i>
                         Events
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex flex-column align-items-center" href="sponsor.html">
+                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('sponsorship.sponsor_page') }}">
                         <i class="fas fa-hand-holding-usd d-block d-lg-none"></i>
                         <i class="fas fa-hand-holding-usd d-none d-lg-block"></i>
                         Sponsor
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('contact.contactUs') }}">
                         <i class="fas fa-envelope d-block d-lg-none"></i>
                         <i class="fas fa-envelope d-none d-lg-block"></i>
                         Contact
