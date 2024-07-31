@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, jsonify, request,flash,session, url_for
+from flask import Blueprint, redirect, render_template, request,flash,session, url_for
 
 from Website.mail import send_mail
 

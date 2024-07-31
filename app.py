@@ -1,14 +1,8 @@
-from flask import Flask, render_template
 
-app = Flask(__name__)
+from Website import create_app
 
-@app.route('/')
-def index():
-    return render_template('index.html')
 
-# @app.route('/')
-# def sponsor():
-#     return render_template('sponsor.html')
+app=create_app()
 
 if __name__ == '__main__':
     app.run(debug=True)
