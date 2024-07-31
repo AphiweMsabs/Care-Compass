@@ -1,6 +1,4 @@
 from flask import Blueprint, redirect, render_template, jsonify, request,flash,session, url_for
-from flask_mail import Mail, Message
-# from email_validator import validate_email, EmailNotValidError
 from functools import wraps
 import pyrebase
 
