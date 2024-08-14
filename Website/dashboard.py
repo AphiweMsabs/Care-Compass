@@ -5,4 +5,4 @@ dash= Blueprint("dashboard",__name__)
 @dash.route('/my-dashboard',methods=['GET', 'POST'])
 
 def dashboard_page():
-     return render_template("index.html")
+     return render_template("dashboard.html")

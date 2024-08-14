@@ -1,0 +1,141 @@
+# import pyrebase
+# import datetime
+
+# # Firebase configuration
+# firebaseConfig = {
+#     "apiKey": "your-api-key",
+#     "authDomain": "your-project-id.firebaseapp.com",
+#     "databaseURL": "https://your-project-id.firebaseio.com",
+#     "projectId": "your-project-id",
+#     "storageBucket": "your-project-id.appspot.com",
+#     "messagingSenderId": "your-sender-id",
+#     "appId": "your-app-id"
+# }
+
+# # Initialize Pyrebase
+# firebase = pyrebase.initialize_app(firebaseConfig)
+# db = firebase.database()
+
+# # Data to be uploaded
+# events_data = {
+#     "-N1234567890abcdef": {
+#         "event_name": "Art Exhibition",
+#         "host": "Art Gallery NYC",
+#         "date": "2024-09-15",
+#         "description": "An exhibition showcasing contemporary art from emerging artists.",
+#         "timestamp": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+#     },
+#     "-N0987654321fedcba": {
+#         "event_name": "Tech Conference",
+#         "host": "Tech Innovators Inc.",
+#         "date": "2024-10-05",
+#         "description": "A conference on the latest advancements in technology and innovation.",
+#         "timestamp": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+#     },
+#     "-Nabcdef123456789": {
+#         "event_name": "Music Festival",
+#         "host": "Festival Productions",
+#         "date": "2024-12-20",
+#         "description": "A three-day music festival featuring top bands and artists from around the world.",
+#         "timestamp": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+#     }
+# }
+
+# # Push combined data to Firebase
+# db.child("events").set(events_data)
+
+# print("Data uploaded successfully!")
+
+
+
+
+# <!DOCTYPE html>
+# <html lang="en">
+# <head>
+#     <meta charset="UTF-8">
+#     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#     <title>Events</title>
+#     <!-- Add Bootstrap CSS or your custom styles -->
+#     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+# </head>
+# <body>
+#     <div class="container mt-4">
+#         <div class="row">
+#             {% if events %}
+#                 {% for key, event in events.items() %}
+#                 <div class="col-md-4">
+#                     <div class="card mb-4 shadow-sm">
+#                         <img class="card-img-top" src="{{ url_for('static', filename='img/poverty1.png') }}" alt="Card image cap">
+#                         <div class="card-body">
+#                             <h4 class="card-title">{{ event['event_name'] }}</h4>
+#                             <h6 class="card-host">{{ event['host'] }}</h6>
+#                             <h6 class="card-date">{{ event['date'] }}</h6>
+#                             <p class="card-text">{{ event['description'] }}</p>
+#                         </div>
+#                         <div class="card-footer">
+#                             <small class="text-muted">Last updated {{ event['timestamp'] }}</small>
+#                         </div>
+#                     </div>
+#                 </div>
+#                 {% endfor %}
+#             {% else %}
+#                 <p>No events found.</p>
+#             {% endif %}
+#         </div>
+#     </div>
+# </body>
+# </html>
+
+# @app.route('/')
+# def index():
+#     events = db.child("events").get().val()  # Fetch events from Firebase
+#     return render_template('index.html', events=events)
+# from flask import Flask, request, redirect, url_for, render_template
+# import pyrebase
+# import datetime
+
+# app = Flask(__name__)
+
+# # Your Firebase config
+# firebaseConfig = {
+#     "apiKey": "your-api-key",
+#     "authDomain": "your-project-id.firebaseapp.com",
+#     "databaseURL": "https://your-project-id.firebaseio.com",
+#     "projectId": "your-project-id",
+#     "storageBucket": "your-project-id.appspot.com",
+#     "messagingSenderId": "your-sender-id",
+#     "appId": "your-app-id"
+# }
+
+# # Initialize Pyrebase
+# firebase = pyrebase.initialize_app(firebaseConfig)
+# db = firebase.database()
+
+# @app.route('/')
+# def index():
+#     events = db.child("events").get().val()  # Fetch events from Firebase
+#     return render_template('index.html', events=events)
+
+# @app.route('/add_event', methods=['POST'])
+# def add_event():
+#     event_name = request.form['event_name']
+#     host = request.form['host']
+#     date = request.form['date']
+#     description = request.form['description']
+    
+#     # Create a new event
+#     new_event = {
+#         'event_name': event_name,
+#         'host': host,
+#         'date': date,
+#         'description': description,
+#         'timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # current timestamp
+#     }
+
+#     # Push the new event to Firebase
+#     db.child("events").push(new_event)
+
+#     return redirect(url_for('index'))
+
+# if __name__ == '__main__':
+#     app.run(debug=True)

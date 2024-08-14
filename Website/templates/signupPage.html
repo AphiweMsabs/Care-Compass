@@ -4,37 +4,114 @@
 <title>Sign Up</title>
 {% endblock %}
 
-
 {% block body %}
-    <h1 style="text-align:center;">Create an account</h1>
-    <form action="/sign-up" method="post" style="margin: 0 auto;min-width: 100px;max-width: 200px;">
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #0036da;">
+            <div class="featured-image mb-3">
+                <img src="static/img/logo.png" class="img-fluid" style="width: 250px;">
+            </div>
+            <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;"><br><br><br> Join Care Compass!</p>
+            <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">To start accessing and sharing essential services that empower individuals in need.</small>
+             
+        </div>
 
-        <label for="firstName">Name:</label><br>
-        <input type="text" id="firstName" name="firstName" required><br><br>
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Create an account</h2>
+                </div>
+                <form action="/sign-up" method="post" class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" id="firstName" name="firstName" placeholder="Enter your Name" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" id="lastName" name="lastName" placeholder="Enter your Surname" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control form-control-lg bg-light fs-6" id="email" name="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" id="password2" name="password2" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="userType" class="me-2">Are you a :   </label>
+                        <div class="form-group">
+                            <select class="form-control" id="amount" name="amount">
+                                <option >Volunteer</option>
+                                <option >Sponsor</option>
+                                <option >Volunteer & Sponsor</option>
+                            
+                            </select>
+                        </div>
+                        
+                    </div>
 
-        <label for="lastName">Surname:</label><br>
-        <input type="text" id="lastName" name="lastName" required><br><br>
+                    
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Sign Up</button>
+                    </div>
+                    <div class="row">
+                        <small>Already have an account? <a href="{{ url_for('register.login') }}">Login</a></small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="*********" required><br><br>
+<style>
 
-        <label for="password2">Confirm Password:</label>
-        <input type="password" id="password2" name="password2" placeholder="*********" required><br><br>
 
-        <label for="userType">Are you a:</label>
-        <select name="userType" id="userType">
-            <option value="">Volunteer</option>
-            <option value="Sponsor">Sponsor</option>
-            <option value="Both">Both</option>
-        </select><br><br>
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url('static/img/poverty1.png');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+        }
 
-        <input type="submit" value="Sign Up"><br><br>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        <p>Already have an account? <a href = "login">Login</a></p>
-        <input type="button" class="login-button" value="Login" onclick="location.href='login';">
-    </form>
+.box-area {
+    width: 930px;
+}
+
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
+    }
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}
+</style>
 
 {% endblock %}

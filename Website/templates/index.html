@@ -11,7 +11,7 @@
         Together, we build<br> bridges of hope:<br>
         Empowering communities,<br> one service at a time.
     </h2>
-    <a href="{{ url_for('register.signUp') }}" class="btn btn-light btn-lg">Join Now</a>
+    <a href="{{ url_for('register.signUp') }}" class="btn btn-carousel btn-light btn-lg poppins-regula" >Join Now</a>
 </div>
 
 <div id="imageCarousel" class="carousel slide" data-ride="carousel">
@@ -42,7 +42,7 @@
 </div>
 
 
-<div class="about-section">
+<div id="about" class="about-section">
     
     <div class="first-half poppins-regula ">
         <h2 class ="poppins-bold">Welcome to Care Compass</h2><br><br>
@@ -56,34 +56,116 @@
     <div class="goals-heading text-center poppins">
         <h2 class ="poppins-bold">Care Compass Goals</h2>
     </div>
+
+
     <div class="second-half poppins-regula">
+        <div class="col-md-4">
         <div class="goal-box">
             <h4 class ="poppins-bold">Provide Essential Information</h4>
             <p>To distribute information about crucial <br>
-                services such as soup kitchens, homeless <br>
-                shelters, thrift stores, mobile water services, <br>
-                mobile clinics, care centers, <br>
-                 and buy-back centers.<br></p>
+              services such as soup kitchens,<br> 
+              homeless shelters, thrift stores, <br>
+              mobile water services, mobile clinics,
+              care centers and buy-back centers.<br></p>
         </div>
-        
-        
+    </div>
+    <div class="col-md-4">
         <div class="goal-box">
             
             <h4 class ="poppins-bold">Facilitate <br>Connections</h4>
             <p>To connect sponsors, volunteers, and <br>
-                donors with essential service providers <br>
-                and locations, ensuring accessibility <br>
-                regardless of financial constraints.</p>
+              donors with essential service providers <br>
+              and locations, ensuring accessibility <br>
+              regardless of financial constraints.</p>
         </div>
-        
+    </div>
+        <div class="col-md-4">
         <div class="goal-box">
             <h4 class ="poppins-bold">Form <br>Partnerships</h4>
             <p>To establish strong partnerships with <br>
-                orphanages, food companies, clothing <br>
-                companies, and clinics to ensure a steady <br>
-                supply of resources and support.</p>
+              orphanages, food companies, clothing <br>
+              companies, and clinics to ensure a <br>
+              steady supply of resources and support.</p>
         </div>
     </div>
+    </div>
 </div>
+
+<!--Contact page-->
+<!-- Contact page -->
+<section id="contact" class="contact-page py-12 py-sm-24 py-md-32 bg-info-light position-relative overflow-hidden">
+  <div class="container position-relative">
+      <div class="mw-6xl mx-auto">
+          <div class="row align-items-center">
+              <!-- Left side -->
+              <div class="col-12 col-lg-6 mb-16">
+                  <div class="mw-md mx-auto">
+                      <span class="fs-9 text-primary text-uppercase">Contact Us !</span><br>
+                      <br><h2 class="mt-6 mb-24">To learn more about how we can work together to make a meaningful difference in your life.</h2><br>
+                      <div class="mb-14">
+                          <span class="text-uppercase fw-bold">Email</span><br>
+                          <a href="mailto:carecompass5@gmail.com" class="text-decoration-none" style="color: black;">carecompass5@gmail.com</a><br>
+                      </div><br>
+                      <div>
+                          <span class="text-uppercase fw-bold" >Phone</span><br>
+                          <a href="tel:+27123456789" class="text-decoration-none" style="color: black;">+27 12-345-6789</a>
+                      </div><br><br>
+                  </div>
+              </div>
+
+              <!-- Right side -->
+              <div class="col-12 col-lg-6 position-relative">
+                  <div class="gogo mw-md mx-auto mw-lg-lg me-lg-0 pt-8 pb-12 px-6 px-md-10 bg-white bg-opacity-75 rounded-4 shadow-lg position-relative">
+                      <form action="/contact">
+                          <label class="form-label fw-light">Name</label>
+                          <div class="input-group mb-4">
+                              <span class="input-group-text bg-transparent">
+                                  <i class="fas fa-user thin"></i>
+                              </span>
+                              <input class="form-control" type="text" placeholder="First & last name" required>
+                          </div>
+
+                          <label class="form-label fw-light">Phone Number</label>
+                          <div class="input-group mb-4">
+                              <span class="input-group-text bg-transparent">
+                                  <i class="fas fa-phone"></i>
+                              </span>
+                              <input class="form-control" type="text" placeholder="+27 12-345-6789" required>
+                          </div>
+
+                          <label class="form-label fw-light">Email Address</label>
+                          <div class="input-group mb-4">
+                              <span class="input-group-text bg-transparent">
+                                  <i class="fas fa-envelope"></i>
+                              </span>
+                              <input class="form-control" type="text" placeholder="Email address" required>
+                          </div>
+                          
+                          <label class="form-label fw-light">Message</label>
+                          <textarea class="ps-12 mb-6 form-control" style="height: 187px; resize: none;" placeholder="Write your message here" required></textarea>
+                          <a class="btn btn-primary shadow" href="#">Send Message</a>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+      <div class="container text-center">
+          <p class="mb-0">&copy; 2024 Care Compass. All rights reserved.</p>
+         
+      </div>
+    </footer>
+  
+  
+
+  
+
+
+
 
 {% endblock %}

@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                    <a class="nav-link d-flex flex-column align-items-center" href="#about">
                         <i class="fas fa-info-circle d-block d-lg-none"></i>
                         <i class="fas fa-info-circle d-none d-lg-block"></i>
                         About
@@ -72,11 +72,25 @@
                         Contact
                     </a>
                 </li>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <li class="nav-item">
+                    <a class="nav-link d-flex flex-column align-items-center" href="{{ url_for('register.login') }}">
+                        <i class="fas fa-user d-block d-lg-none"></i>
+                        <i class="fas fa-user d-none d-lg-block"></i>
+                        Login
+                    </a>
+                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
         </div>
     </nav>
 

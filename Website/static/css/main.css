@@ -29,7 +29,6 @@
     color: #000 !important; 
 }
 
-
 .navbar-brand {
     margin-left: 110px;
     margin-right: 60px !important;
@@ -42,6 +41,8 @@
 .navbar-dark .navbar-nav {
     margin: auto; 
 }
+
+
 
 /* For Image Scroll*/
 #imageCarousel {
@@ -63,41 +64,102 @@
 
 /* Caption */
 .carousel-caption {
-    left: 100px !important;
-    text-align: left !important;
-    top: 20%; 
+    position: absolute;
+    left: 10%; 
+    text-align: left;
+    top: 20%;
+    width: 80%; 
 }
 
 .lato-regular {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 90px !important; 
-  }
+    font-size: 6vw; 
+    line-height: 1.2;
+}
 
+
+
+@media (max-width: 1200px) {
+    .carousel-caption {
+        left: 5%; 
+        top: 15%;
+    }
+
+    .lato-regular {
+        font-size: 5vw; 
+    }
+
+    .btn-carousel {
+        width: 20vw;
+        height: 6vw;
+        font-size: 1.5vw;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        left: 2%; 
+        top: 10%;
+        width: 95%; 
+    }
+
+    .lato-regular {
+        font-size: 4vw; 
+    }
+
+    .btn-carousel {
+        width: 25vw;
+        height: 7vw;
+        font-size: 1.2vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .carousel-caption {
+        left: 0%;
+        top: 5%;
+        width: 100%;
+        text-align: center; 
+    }
+
+    .lato-regular {
+        font-size: 6vw; 
+    }
+
+    .btn-carousel {
+        width: 30vw;
+        height: 8vw;
+        font-size: 1.5vw;
+    }
+}
+
+
+  
 
 /* About Us */
 .about-section {
-    /* padding:  90px; */
     background-color: #2866C0;
+    color: #ffffff;
 }
 
 .first-half {
     background-color: #ffffff; 
     color: #000000;
     text-align: center;
-    padding: 80px;
-    border-bottom: 1px solid #cccccc; 
+    padding: 80px 20px; 
 }
 
 .second-half {
     background-color: #2866C0; 
     color: #fff;
     display: flex;
-    text-align: center;
-    padding: 80px;
-    justify-content: space-around;
-    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 20px; 
 }
 
 .goal-box {
@@ -107,8 +169,15 @@
     border-radius: 10px;
     border: 2px solid #fff;
     flex: 1;
-    margin: 0 60px;
+    margin: 0 20px; 
     padding: 30px 20px;
+    min-width: 250px; 
+}
+
+.goal-box:hover {
+    background-color: #ffffff; 
+    color: #2866C0; 
+    border: 2px solid #2866C0;
 }
 
 .goals-heading {
@@ -122,20 +191,123 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px !important; 
+    font-size: 18px;
 }
 
-.poppins{
+.poppins {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* font-size: 20px !important;  */
-
 }
-  
+
 .poppins-bold {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 32px !important; 
+    font-size: 32px;
 }
+
+
+@media (max-width: 1200px) {
+    .goal-box {
+        margin: 0 15px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .second-half {
+        padding: 60px 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .second-half {
+        flex-direction: column;
+        padding: 40px 20px; 
+    }
+
+    .goal-box {
+        margin: 20px 0;
+        flex: none;
+        width: calc(100% - 40px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .first-half {
+        padding: 40px 20px; 
+    }
+
+    .poppins-bold {
+        font-size: 28px; 
+    }
+
+    .poppins-regula {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 380px) {
+    .first-half {
+        padding: 20px 10px; 
+    }
+
+    .poppins-bold {
+        font-size: 24px; 
+    }
+
+    .poppins-regula {
+        font-size: 14px; 
+    }
+
+    .goal-box {
+        padding: 20px 10px;
+        margin: 10px 0;
+        min-width: 0; 
+
+    .goals-heading {
+        padding-top: 30px; 
+    }
+}
+}
+
+/* Contact */
+
+.contact-page {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+}
+
+
+.contact-page .text-uppercase {
+    text-transform: uppercase;
+}
+
+.contact-page .fw-bold {
+    font-weight: bold;
+
+    
+}
+
+.contact-page .gogo {
+    border: 2px solid #ddd; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 25px; 
+    margin: 0 auto; 
+    background: #ffffff; 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
