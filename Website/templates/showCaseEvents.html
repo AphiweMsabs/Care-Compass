@@ -1,6 +1,275 @@
-{% extends 'base.html' %}
 
-{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+      body{
+        padding: 5rem;
+        background-color:#0036da;
+
+      }
+        /* Container for horizontal scrolling */
+        .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 10px; /* Space between cards */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        /* Styling for cards to be smaller */
+        .card {
+            width: 250px; /* Adjust as needed */
+            flex: 0 0 auto; /* Prevent cards from shrinking */
+            margin: 0; /* Reset default margins */
+        }
+        /* Optional: Styling to indicate scrollable area */
+        .scrolling-wrapper::-webkit-scrollbar {
+            height: 8px; /* Height of the scrollbar */
+        }
+        .scrolling-wrapper::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the scrollbar thumb */
+            border-radius: 10px; /* Rounded corners */
+        }
+        .scrolling-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Darker color on hover */
+        }
+    </style>
+    <!-- Add Bootstrap CSS or your custom styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+      <h2>Events</h2>
+        <div class="scrolling-wrapper">
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <!-- Duplicate the card div as needed -->
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">event_name</h4>
+                    <h6 class="card-host">host</h6>
+                    <h6 class="card-date">date</h6>
+                    <h6 class="card-date">province</h6>
+                    <p class="card-text">description</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated item.timestamp ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+      <h2>Volunteer Spots</h2>
+      <div class="scrolling-wrapper">
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <!-- Duplicate the card div as needed -->
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+          <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/will.jpg') }}" alt="Card image cap">
+              <div class="card-body">
+                  <h4 class="card-title">event_name</h4>
+                  <h6 class="card-host">host</h6>
+                  <h6 class="card-date">date</h6>
+                  <h6 class="card-date">province</h6>
+                  <p class="card-text">description</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated item.timestamp ago</small>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
+
+<!-- {% extends 'base.html' %}
+
+{% block body %} -->
 <!-- <div class="card-group">
     <div class="card">
       <img class="card-img-top" src="..." alt="Card image cap">
@@ -43,7 +312,7 @@
       <a href="#" class="card-link">Another link</a>
     </div>
   </div> -->
-  <div class="container, class">
+  <!-- <div class="container, class">
     <div class="row mt-4">
         {% for event in events %}
         <div class="col-md-4">
@@ -63,4 +332,4 @@
         {% endfor %}
     </div>
 
-{% endblock %}
+{% endblock %} -->

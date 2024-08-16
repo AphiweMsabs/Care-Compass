@@ -28,10 +28,6 @@ db=firebase.database()
 
 def showcase_events():
 
-   
-
-
-
     return render_template("showCaseEvents.html")
 
 @happenings.route('/add-events',methods=['GET', 'POST'])
