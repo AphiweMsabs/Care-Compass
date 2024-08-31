@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<form action="/create-events" method="post" style="margin: 0 auto;min-width: 100px;max-width: 200px;">
+<form id = "create-events" action="/create-events" method="post" style="margin: 0 auto;min-width: 100px;max-width: 200px;">
     <label for="eventType">Event Type:</label><br>
     <input type="text" id="eventType" name="eventType" placeholder="e.g Clothing drive" required><br><br>
 
@@ -34,6 +34,9 @@
 
     <textarea id="message" name="message" placeholder="Description"></textarea><br><br><br>
 
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <input type="submit" value="ADD EVENT">
+    <script type="module" src="{{ url_for('static', filename='js/events.js') }}"></script>
+
 </form>
 {% endblock %}
